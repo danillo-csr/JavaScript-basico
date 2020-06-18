@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Operadores matematicos</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script src='main.js'></script>
+</head>
+<body>
+    
+
+    <script>
+        // atribui o valor 10 a variavel x
+        // e 5 a variavel y
+        var x = 10, y = 5;
+
+        //mostra o valor das váriaveis x e y
+        console.log(x,y);
+
+        //atribui à variavel resultado a soma das váriaveis x e y
+        var resultado = x + y;
+
+        //mostra o valor da variavel resultado
+        console.log(resultado);
+
+        //atribui a string "numero: " à variável x
+        //alterando seu tipo, que era int, para string
+        x = "numero: ";
+
+        //como não são duas variáveis do tipo int, o operador + não consegue
+        // somar os seus valores, e nesse caso ele irá concatenar os valores
+        // e armazenar na variavel resultado
+        resultado = x + y;
+        
+        //mostra o conteudo da variavel resultado
+        console.log(resultado);
+    </script>
+</body>
+</html>
