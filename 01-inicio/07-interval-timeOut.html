@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Interval & timeOut</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script src='main.js'></script>
+</head>
+<body>
+    
+
+    <script>
+
+        function showHelloThere(){
+            console.log("Hello There!");
+        }
+        //define algo a ser executado em um intervalo de milisegundos
+        //neste caso, executa a função showHelloThere a cada 1000 milisegundos
+        //setInterval(showHelloThere, 1000);
+
+        //define algo a ser executado após um intervalo de tempo definido
+        //executa apenas uma vez
+        //neste caso, após 5000 milisegundos, irá executar uma vez a função
+        // showHelloThere
+        setTimeout(showHelloThere, 5000);
+    </script>
+</body>
+</html>
