@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>desafio 04</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script src='main.js'></script>
+</head>
+<body>
+    
+
+
+    <script>
+
+        var anosEstudos;
+
+        function experiencia(anosEstudos){
+            if( anosEstudos >= 0 && anosEstudos < 1 ){
+                return "Iniciante";
+            } else if( anosEstudos >= 1 && anosEstudos < 3){
+                return "Intermediário";
+            } else if ( anosEstudos >= 3 && anosEstudos <= 6){
+                return "Avançado";
+            } else if ( anosEstudos >= 7){
+                return "Jedi Master";
+            }
+        }
+
+        console.log("Seu nível de experiência é: " + experiencia(2));
+
+
+    </script>
+</body>
+</html>
