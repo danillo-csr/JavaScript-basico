@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>lidando com elementos</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script src='main.js'></script>
+</head>
+<body>
+    
+    <div id="inicio">
+        <input id="nome">
+
+
+    </div>
+
+    <script>
+
+        //o método createElement('a') cria um elemento do tipo especificado
+        //através do parametro passado.
+        //neste caso, é um elemento 'a', ou seja, um link
+        var linkElement = document.createElement('a');
+
+        //faz a configuração do elemento recebido pela variável linkElement
+        //neste caso, configura o atributo 'href' com o valor 'http://rocketseat.com'
+        linkElement.setAttribute('href', 'http://rocketseat.com.br');
+
+        //o método createTextNode() define um texto que será utilizado como
+        //texto do elemento a, criado pelo método createElement();
+        var textElement = document.createTextNode('Acessar o site da RocketSeat!');
+
+        //associa o item textElement como um elemento filho de linkElement(), ou seja
+        //insere o conteúdo da variável textElement como um conteúdo filho do elemento
+        //contido em linkElement
+        linkElement.appendChild(textElement);
+
+        //faz uma busca de um elemento que tenha um id = 'inicio' e 
+        //armazena esse elemento na variável containerElement();
+        var containerElement = document.querySelector('#inicio');
+
+        //insere o elemento contido na variável linkElement como um elemento filho
+        //do elemento contido na variável containerElement()
+        //ou seja, irá inserir o elemento <a href="http://rocketseat.com"> como um
+        //elemento filho do elemento <div id="inicio">
+        containerElement.appendChild(linkElement);
+
+        //a variável inputElement recebe uma referencia ao elemento que contém id = 'nome'
+        var inputElement = document.querySelector('#nome');
+
+        //remove o elemento filho (inputElement) do elemento pai (containerElement)
+        //ou seja, remove o elemento <input id="nome"> de dentro do elemento <div id="inicio">
+        containerElement.removeChild(inputElement);
+
+
+
+
+
+    </script>
+</body>
+</html>
