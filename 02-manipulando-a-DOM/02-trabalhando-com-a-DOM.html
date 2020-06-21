@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>trabalhando com a DOM</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script src='main.js'></script>
+</head>
+<body>
+    <div id="app">
+        <input type="text" name="_nome" id="nome" class="cname">
+        <button class="botao">Adicionar</button>
+    </div>
+
+    <script>
+        //o método getElementById() recupera um elemento a partir do valor do seu Id
+        //recupera o elemento a partir do valor do Id, e atribui à variável
+        //elementoInput_id
+        var elementoInput_id = document.getElementById('nome');
+        
+        //mostra o conteúdo do elementoInput_id     
+        console.log(elementoInput_id);
+
+        //-----------------------------------------------------
+
+        //o método getElementsByTagName() recupera um vetor de elementos a partir do nome da tag
+        // e atribui à variável elementoInput_tagName, que conterá todos os elementos de uma mesma tag
+        //sendo assim, se houver mais de uma ocorrencia de um mesmo tipo de tag, deve-se informar
+        //a posição que deseja selecionar.
+        //por exemplo: getElementsByTagName('input')[0] retorna a primeira ocorrencia de um elemento
+        //to tipo input
+        var elementoInput_tagName = document.getElementsByTagName('input');
+
+        //mostra o conteúdo do elementoInput_tagName
+        console.log(elementoInput_tagName);
+
+        //-----------------------------------------------------
+
+        //o método getElementsByClassName() recupera um vetor de elementos a partir do nome da classe
+        // e atribui à variável elementoInput_class, que conterá todos os elementos de uma mesma classe
+        //sendo assim, se houver mais de uma ocorrencia de um mesmo tipo de classe, deve-se informar
+        //a posição que deseja selecionar.
+        //por exemplo: getElementsByClassName('cname')[0] retorna a primeira ocorrencia de um elemento
+        //contendo a classe 'cname'
+        var elementoInput_class = document.getElementsByClassName('cname');
+
+        //mostra o conteúdo do elementoInput_class
+        console.log(elementoInput_class);
+
+        //-----------------------------------------------------
+
+        //o método querySelector() faz uma busca do item, dentro do endereço passado via parametro, ou seja:
+        // ('body div#app input') busca um elemento do tipo input que esteja dentro de uma div com id = app que esteja dentro do body
+        var inputElement_querySelect = document.querySelector('body div#app input');
+
+        //mostra o elemento input recebido pela variável inputElement_querySelect
+        console.log(inputElement_querySelect);
+
+        //-----------------------------------------------------
+
+        //o método querySelector() faz uma busca do item, dentro do endereço passado via parametro, ou seja:
+        // ('input[name=_nome]') busca um elemento do tipo input que tenha o valor do indice name = _nome
+        var inputElement_querySelect2 = document.querySelector('input[name=_nome');
+
+        //mostra o elemento input recebido pela variável inputElement_querySelect
+        console.log(inputElement_querySelect2);
+
+        //o método querySelector() retorna sempre apenas um elemento
+        //se houver mais de um elemento que cumpra os requisitos do q
+        //foi especificado na busca, ele retornará apenas a primeira ocorrencia
+
+        //para retornar um vetor com todas as ocorrencias dos requisitos especificados
+        //usa-se o método querySelectorAll()
+
+        //seleciona o elemento button que tenha a classe = botao e 
+        //atribui à variável btnElement
+        var btnElement = document.querySelector('button.botao');
+        //seleciona um elemento que tenha o id = nome e atribui à variável inputElementIn
+        var inputElementIn = document.querySelector('#nome');
+
+        //executa uma função ao clicar no elemento atribuido à variável btnElement
+        btnElement.onclick = function(){
+        
+        //captura o valor inserido no elemento atribuido a variável inputElementIn e insere
+        //na variavel text
+        var text = inputElementIn.value;
+            //o metodo alert() mostra o conteúdo da variável text
+            alert(text);
+        }
+
+
+    </script>
+</body>
+</html>

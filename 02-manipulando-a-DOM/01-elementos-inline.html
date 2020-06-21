@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>elementos inline</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script src='main.js'></script>
+</head>
+<body>
+
+    <div id="app">
+
+        <!--executa a função showAlert() ao clicar no botão-->
+        <button onclick="showAlert()">Pressione este botão!</button>
+        <hr>
+        <!--executa a funçaõ showAlert() ao passar o mouse sobre o botão-->
+        <button onmouseover="showAlert()">Passe o mouse sobre este botão!</button>        
+        <hr>
+        <!--executa a funçaõ showAlert(), 5 segundos depois de passar o mouse sobre o botão-->
+        <button onmouseover="setTimeout(showAlert, 5000)">Passe o mouse sobre este botão (e espere 5 segundos)!</button>
+        <hr>
+        <!--executa a função showAlert2() ao pressionar uma tecla-->
+        <input onkeydown="showAlert2()">
+        <hr>
+        <!--executa a função showAlert3() ao liberar uma tecla-->
+        <input onkeyup="showAlert3()">
+        <hr>
+        <!--executa a função showAlert4() ao liberar uma tecla-->
+        <input onkeypress="showAlert4()">
+
+
+    </div>
+    
+
+    <script>
+        //define uma função que irá mostrar uma mensagem
+        function showAlert(){
+            alert('Botão foi ativado!');
+        }
+
+        function showAlert2(){
+            alert('A tecla foi pressionada!')
+        }
+
+        function showAlert3(){
+            alert('a tecla foi liberada');
+        }
+        function showAlert4(){
+            alert('a tecla foi pressionada e liberada');
+        }
+
+    </script>
+</body>
+</html>
