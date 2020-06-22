@@ -17,14 +17,23 @@
 
     <script>
 
-        quadElement = document.createElement('div');
-        quadElement.setAttribute('id');
+        var btnElement = document.querySelector('#btn');
 
+        btnElement.onclick = function(){
 
-        btnElement = document.querySelector('#btn');
-        divElement = document.querySelector('#principal');
+        var divElement = document.querySelector('#principal');
+        var quadElement = document.createElement('div');
+        divElement.appendChild(quadElement);
 
+        quadElement.style.width = '100px';
+        quadElement.style.height = '100px';
+        quadElement.style.backgroundColor = 'silver';
+        quadElement.style.marginTop = '5px';
+        quadElement.style.borderRadius = '5px';
+        quadElement.style.boxShadow = '5px 5px 5px gold'
 
+        }
+        
 
 
     </script>
