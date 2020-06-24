@@ -3,13 +3,13 @@
 <head>
     <meta charset='utf-8'>
     <meta http-equiv='X-UA-Compatible' content='IE=edge'>
-    <title>desafio 01</title>
+    <title>desafio 02</title>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
     <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
     <script src='main.js'></script>
 </head>
 <body>
-    
+
     <div id="principal">
 
         <button id="btn">Clique me!</button>
@@ -23,21 +23,35 @@
 
         var divElement = document.querySelector('#principal');
         var quadElement = document.createElement('div');
+        
         divElement.appendChild(quadElement);
 
         quadElement.style.width = '40px';
         quadElement.style.height = '40px';
         quadElement.style.backgroundColor = 'silver';
         quadElement.style.marginTop = '5px';
-        quadElement.style.borderStyle = 'solid'
-        quadElement.style.borderWidth = '1px;'
+        quadElement.style.borderStyle = 'none';
         quadElement.style.borderRadius = '25px';
-        quadElement.style.boxShadow = '2px 2px 2px gold'
+        quadElement.style.boxShadow = '3px 3px 3px silver';        
 
-        }
+
+        quadElement.onmouseover = function(){
         
+        function getRandomColor(){
+        var letters = "0123456789ABCDEF";
+        var color = "#";
+            for (var i = 0; i < 6; i++){
+                color += letters[Math.floor(Math.random() * 16)];
+            }
+                return color;
+        }
 
+        var newColor = getRandomColor();
+        quadElement.style.backgroundColor = newColor;
+        }
+        }
 
     </script>
+    
 </body>
 </html>
