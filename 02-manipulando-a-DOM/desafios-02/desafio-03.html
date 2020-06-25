@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>desafio 03</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script src='main.js'></script>
+</head>
+<body>
+    <div id="container">
+        <ul id="lista">
+
+        </ul>
+    </div>
+
+
+    <script>
+
+        var nomes = ['Danillo', 'Vanessa', 'Mauro', 'Horrorozinho', 'Horrorosa'];
+        
+
+        for (var i = 0; i < nomes.length; i++){
+         
+        var listElement = document.createElement('li');
+
+        var nomeElement = document.createTextNode(nomes[i]);
+        
+        listElement.appendChild(nomeElement);
+        
+        var ulElement = document.querySelector('#lista');
+        
+        ulElement.appendChild(listElement);        
+
+        }
+
+    </script>
+</body>
+</html>
